@@ -4,7 +4,7 @@ import post_src from '../api/sheety';
 
 class Blog extends React.Component {
     state = {
-        posts: [{post: "Post Test Text", date: "2019-01-01", title: "Test Title", image: null}],
+        posts: [],
         selected_post: null
     }
 
@@ -22,7 +22,10 @@ class Blog extends React.Component {
     render(){
         return(
             <div className="ui container">
-                <PostList post_list={this.state.posts}></PostList>
+            <div className="ui relaxed divided items">
+            <PostList post_list={this.state.posts}></PostList>
+            </div>
+                
             </div>
         )
     }
